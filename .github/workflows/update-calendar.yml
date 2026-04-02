@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Droit strict pour pouvoir pusher le fichier généré
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Anticipation de la dépréciation Node 20
 
     steps:
       - name: Checkout du code
