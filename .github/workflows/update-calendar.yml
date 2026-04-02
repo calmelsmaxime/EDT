@@ -2,8 +2,9 @@ name: Filtrage Calendrier ICS
 
 on:
   schedule:
-    - cron: '0 * * * *' # Exécution automatique toutes les heures
-  workflow_dispatch: # Te permet de déclencher le script manuellement depuis GitHub pour tester
+    # Correspond à 06:00, 12:00, 17:00 et 20:00 (Heure de Paris - UTC+2)
+    - cron: '0 4,10,15,18 * * *'
+  workflow_dispatch:
 
 jobs:
   update-ics:
